@@ -1,10 +1,10 @@
 let subjects = [
     {
         id: 1,
-        title: "Maths",
+        title: "Geography",
         location: "London",
         price: 10000,
-        image: "images/calc1.png",
+        image: "images/geography.png",
         spaces: 5
     },
     {
