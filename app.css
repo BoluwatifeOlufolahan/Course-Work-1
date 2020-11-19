@@ -55,10 +55,7 @@ body {
   justify-content: center;
 }
 
-.button-normal{
-  width: 200dp;
-  height: 60dp;
-}
+
 .subject {
   border: 1px solid lightgray;
   border-radius: 10px;
