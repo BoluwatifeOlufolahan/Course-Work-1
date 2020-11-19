@@ -3,7 +3,7 @@ header h1{
 }
 
 body {
-    max-width: 970px;
+    padding-bottom: 60dp;
 }
 
 /* Style the main content */
