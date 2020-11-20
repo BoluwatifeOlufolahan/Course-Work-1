@@ -1,46 +1,10 @@
-
 header h1{
     padding: 10px 20px;
 }
 
 body {
-    max-width: 970px;
+    padding-bottom: 60dp;
 }
-.cart {
-  padding: 20px 50px;
-}
-.boxes {
-  margin-top: 20px;
-}
-
-.verify {
-  margin-top: 20px;
-}
-
-.submit {
-  margin-top:20px;
-  float: right;
-}
-
-.pagecheckout {
-  padding: 20px 50px;
-}
-.description {
-  font-size: 150%;
-  margin-top:50px;
-}
-.sidebar {
-  height: 100%;
-  width: 160px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 16px;
-}
-
 
 /* Style the main content */
 .main {
@@ -55,10 +19,6 @@ body {
   justify-content: center;
 }
 
-.button-normal{
-  width: 200dp;
-  height: 60dp;
-}
 .subject {
   border: 1px solid lightgray;
   border-radius: 10px;

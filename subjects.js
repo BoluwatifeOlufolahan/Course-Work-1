@@ -1,18 +1,18 @@
 let subjects = [
     {
         id: 1,
-        title: "Maths",
+        title: "Geography",
         location: "London",
         price: 10000,
-        image: "images/calc1.png",
+        image: "images/geography.png",
         spaces: 5
     },
     {
         id: 2,
-        title: "Further Maths",
+        title: "Chemistry",
         location: "Oxford",
         price: 10000,
-        image: "images/calc1.png",
+        image: "images/chemistry.png",
         spaces: 5
     },
     {
@@ -20,7 +20,7 @@ let subjects = [
         title: "English",
         location: "Nigeria",
         price: 10000,
-        image: "images/calc1.png",
+        image: "images/english.png",
         spaces: 5
     },
     {
@@ -28,7 +28,7 @@ let subjects = [
         title: "Literature",
         location: "York",
         price: 8000,
-        image: "images/calc1.png",
+        image: "images/literature.png",
         spaces: 5
     },
     {
@@ -36,7 +36,7 @@ let subjects = [
         title: "Music",
         location: "Bristol",
         price: 9000,
-        image: "images/calc1.png",
+        image: "images/music.png",
         spaces: 5
     },
     {
@@ -44,7 +44,7 @@ let subjects = [
         title: "Biology",
         location: "London",
         price: 10000,
-        image: "images/calc1.png",
+        image: "images/biology.png",
         spaces: 5
     },
     {
@@ -52,31 +52,31 @@ let subjects = [
         title: "Chemistry",
         location: "Oxford",
         price: 10000,
-        image: "images/calc1.png",
+        image: "images/chemistry.png",
         spaces: 5
     },
     {
         id: 8,
-        title: "French",
+        title: "History",
         location: "London",
         price: 10000,
-        image: "images/calc1.png",
+        image: "images/history.png",
         spaces: 5
     },
     {
         id: 9,
-        title: "Civic Education",
+        title: "Algebra",
         location: "York",
         price: 8000,
-        image: "images/calc1.png",
+        image: "images/algebra.png",
         spaces: 5
     },
     {
         id: 10,
-        title: "Economics",
+        title: "Physical Education",
         location: "Bristol",
         price: 9000,
-        image: "images/calc1.png",
+        image: "images/physical education.png",
         spaces: 5
     }
 ]
