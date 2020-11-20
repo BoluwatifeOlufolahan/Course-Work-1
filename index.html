@@ -95,7 +95,7 @@
                                         <div class="form-group">
                                             <div class="col-md-6">
                                                 <strong for="name">Name:</strong>
-                                                <input v-model.trim="order.name" @blur="$v.order.name.$touch()" :class="{error: shouldAppendErrorClass($v.order.name),
+                                                <input type="text" v-model.trim="order.name" @blur="$v.order.name.$touch()" :class="{error: shouldAppendErrorClass($v.order.name),
                                     valid: shouldAppendValidClass($v.order.name)}" id="name">
                                                 <div v-if="$v.order.name.$error">
                                                     <p v-if="$v.order.name.$error" class="error-message">The name field is
@@ -107,7 +107,7 @@
                                         <div class="form-group">
                                             <div class="col-md-6">
                                                 <strong for="phone">Phone:</strong>
-                                                <input v-model.number="order.phone" @blur="$v.order.phone.$touch()" :class="{error: shouldAppendErrorClass($v.order.phone),
+                                                <input type="number" v-model.number="order.phone" @blur="$v.order.phone.$touch()" :class="{error: shouldAppendErrorClass($v.order.phone),
                                     valid: shouldAppendValidClass($v.order.phone)}" id="phone">
                                                 <div v-if="$v.order.phone.$error">
                                                     <p v-if="!$v.order.phone.required" class="error-message">The phone field
@@ -120,69 +120,12 @@
                                             </div>
                                         </div><!-- end of form-group -->
     
-                                        <div class="form-group">
-                                            <div class="col-md-12"><strong>Address:</strong></div>
-                                            <div class="col-md-12">
-                                                <input v-model.trim="order.address" class="form-control" />
-                                            </div>
-                                        </div><!-- end of form-group -->
-    
-                                        <div class="form-group">
-                                            <div class="col-md-2">
-                                                <strong>Location:</strong>
-                                                <select v-model="order.location" class="form-control">
-                                                    <option disabled>Location</option>
-                                                    <option v-for="(location, key) in locations" v-bind:value="location">
-                                                        {{location}}
-                                                    </option>
-                                                </select>
-                                            </div>
-                                        </div><!-- end of form-group -->
-    
-                                        <div class="form-group">
-                                            <div class="col-md-6 col-md-offset-4">
-                                                <strong>Zip / Postal Code:</strong>
-                                                <input v-model.number="order.zip" class="form-control" type="number" />
-                                            </div>
-                                        </div><!-- end of form-group -->
-    
-                                        <div class="form-group">
-                                            <div class="col-md-6 boxes">
-                                                <input type="checkbox" id="gift" value="true"
-                                                    v-bind:true-value="order.sendGift"
-                                                    v-bind:false-value="order.dontSendGift" v-model="order.gift">
-                                                <label for="gift">Ship As Gift?</label>
-                                            </div>
-                                        </div><!-- end of form-group -->
-    
-                                        <div class="form-group">
-                                            <div class="col-md-6 boxes">
-                                                <input type="radio" id="home" v-bind:value="order.home"
-                                                    v-model="order.method">
-                                                <label for="home">Home</label>
-                                                <input type="radio" id="business" v-bind:value="order.business"
-                                                    v-model="order.method">
-                                                <label for="business">Business</label>
-                                            </div>
-                                        </div><!-- end of form-group-->
-                                    </form>
-    
-                                    <div class="form-group">
-                                        <div class="col-md-6">
-                                            <button type="submit" class=" btn btn-primary submit"
-                                                :disabled="$v.order.$invalid" v-on:click="submitOrder">Place Order</button>
-                                        </div><!-- end of col-md-6-->
-                                    </div><!-- end of form-group-->
+                                       
     
                                     <div class="col-md-12 verify">
                                         <pre>
                                             Name: {{order.name}}
                                             Phone: {{order.phone}}
-                                            Address: {{order.address}}
-                                            Zip: {{order.zip}}
-                                            Location: {{order.location}}
-                                            Method: {{order.method}}
-                                            Gift: {{order.gift}}
                                             </pre>
                                     </div><!-- end of col-md-12 verify-->
                                 </div>
@@ -212,15 +155,6 @@
                     order: {
                         name: '',
                         phone: '',
-                        address: '',
-                        zip: '',
-                        location: '',
-                        method: 'Home Address',
-                        business: 'Business Address',
-                        home: 'Home Address',
-                        gift: '',
-                        sendGift: 'Send As A Gift',
-                        dontSendGift: 'Do Not Send As A Gift'
                     },
     
                 
