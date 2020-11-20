@@ -17,13 +17,16 @@
             <div class="navbar">
                 <div class="navbar">
                     <h1 v-text="sitename"></h1>
-                    <button @click='showCart' class="btn btn-primary btn-lg">
-                        <span class="glyphicon glyphicon-shopping-cart">{{cartItemCount}}<span>&nbsp</span>ShowCart</button>
+                </div>
+                <div class="navbar">
+                    <button type="button" class="btn btn-primary btn-lg" v-on:click='showCart'>
+                        <span class="glyphicon glyphicon-shopping-cart">{{cartItemCount}}</span><b>Show Cart</b>
+                    </button>
                 </div>
             </div>
         </header>
         <main>
-            <div v-if='showSubject'>
+            <div v-if='showSubject' class="main">
             </div>
             <div>
             <div class="card-body">
@@ -40,33 +43,19 @@
                         <p class="price">Price: {{subject.price}}</p>
                         <p>Spaces: {{subject.spaces}}</p>
 
-                        <button class="btn btn-success" v-on:click='addToCart(subject)'
+                        <button  class="btn btn-success" v-on:click='addToCart(subject)'
                             v-if='canAddToCart(subject)'>Add to cart</button>
-
                         <button disabled="true" class="btn btn-success" v-else>Add to cart</button>
 
                         <span v-if='subject.spaces === cartCount(subject.id)'>All out!</span>
                         <span v-else-if="subject.spaces - cartCount(subject.id) < 5">
                             Only {{subject.spaces - cartCount(subject.id)}} left!
                         </span>
+                        <span v-else>Buy now!</span>
                     </div>
                 </div>
             
             </div>
-            </div>
-
-            <div v-else>
-                <h2>Checkout</h2>
-                <p>
-                    <strong>First Name:</strong>
-                    <!-- This input field is bound to 'firstName' in the 'order' object -->
-                    <input />
-                </p>
-                <p>
-                    <strong> Last Name:</strong>
-                    <!-- This input field is bound to 'lastName' in the 'order' object -->
-                    <input />
-                </p>
             </div>
         </main>
     </div>
@@ -75,7 +64,7 @@
         var webstore = new Vue({
             el: '#app',
             data: {
-                sitename: 'Subject Shopping Cart',
+                sitename: 'Coursework 1 Web App with Vue js',
                 subjects: subjects,
                 cart: [],
                 showSubject: true
@@ -84,11 +73,11 @@
                 addToCart(subject) {
                     this.cart.push(subject.id);
                 },
-                canAddToCart(subject) {
-                    return subject.spaces > this.cartCount(subject.id);
-                },
                 showCart() {
                     this.showSubject = this.showSubject ? false : true;
+                },
+                canAddToCart(subject) {
+                    return subject.spaces > this.cartCount(subject.id);
                 },
                 cartCount(id) {
                     let count = 0;
